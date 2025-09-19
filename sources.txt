@@ -1,0 +1,7 @@
+Sources:
+
+osprey_app-e-v1.py
+	https://www.geeksforgeeks.org/take-input-from-stdin-in-python/
+
+examples.txt
+	https://stackoverflow.com/questions/6801704/checksum-remote-file

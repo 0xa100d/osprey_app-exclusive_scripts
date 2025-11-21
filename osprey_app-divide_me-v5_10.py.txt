@@ -5,7 +5,7 @@
 # https://creativecommons.org/licenses/by-sa/3.0/legalcode
 # Copyright (c) 2020-2022 Nathaniel Steven Henry Brown [0+nate@purefame.com]
 
-version = 'p.v7.0.0'
+version = 'p.v5.10.0'
 # Created: 20200321 (March 21, 2020)
 # Sources: 
 #   https://www.geeksforgeeks.org/taking-input-in-python/

@@ -5,6 +5,7 @@
 # Copyright (c) 2020-2026 Nathaniel Steven Henry Brown [nate@purefame.com]
 
 # Version 7.0.0
+# In use with public authorities of National Rebroadcasting
 
 # Source: https://www.tutorialkart.com/python/python-read-file-as-string/
 

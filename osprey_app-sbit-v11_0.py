@@ -29,6 +29,7 @@ from sys import exit
 # import datetime.datetime
 import time
 import json
+from datetime import datetime
 
 sources = """
 Sources:
@@ -394,6 +395,7 @@ if json_fmt:
 		print(json_data[json_fmt], end="")
 	exit(0)
 
+
 if xml_fmt:
 	xml_data = {
 		's': s,
@@ -408,8 +410,16 @@ if xml_fmt:
 		'version': version,
 		'dgst_input': dgst_input,
 	}
-	print('<xml data-s="' + s + '" data-sbit="' + str(sbit) + '" data-genr-hex="' + genr_hex + '" />')
+	
+	XML_DATA = '<?xml version="1.0" encoding="UTF-8" standalone="no"?><!DOCTYPE sbit SYSTEM "http://inlovelike.com/static/XML.DTD">'
+	XML_DATA = XML_DATA + '<sbit data-version="9.0.0" data-id="' + str(xml_data['genr_hex']) + '" data-sha3="' + str(xml_data['genr_hex']) + '" data-genr-si="' + str(xml_data['genr_si']) + '" data-seed="' + str(xml_data['s']) + '" data-last-modified="' + str(datetime.now()) + '">'
+	XML_DATA = XML_DATA + '<qubit data-id="' + str(xml_data['genr_bit']) + '">'
+	XML_DATA = XML_DATA + str(xml_data['sbit'])
+	XML_DATA = XML_DATA + '</qubit></sbit>'
+
+	print(XML_DATA, end="")
 	exit(0)
+
 if dgst_hex == True:
 	print(sbit_sum, end="")
 	exit(0)
